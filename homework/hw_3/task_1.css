@@ -1,0 +1,75 @@
+
+h1 {
+    text-align: right;
+    color: orange;
+}
+
+.green{
+    background: green;
+    color: white;
+    font-style: italic;
+}
+
+p:first-letter {
+    color: red;
+    font-size: 30px;
+}
+
+h2.ogorod{
+    color: orange;
+}
+
+h2.sklad{
+    color: blue;
+}
+
+.ogorod .fruct>ol{
+    color: grey;
+}
+
+.sklad .fruct>ol{
+    color: green;
+}
+
+.ovochi>ol{
+    color: red;
+}
+
+strong.bold:after{
+    content: ":";
+    font-weight: bold;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+table, td {
+    border: solid 1px;
+}
+
+td.orange{
+    color:orange;
+    font-style: normal;
+    text-align: left;
+    border: black;
+}
+
+tr.green{
+    font-style: normal;
+    text-align: center;
+}
+
+tr.bold{
+    text-align: center;
+}
+
+
+
+#stud, #pos, table {
+    width: 50%;
+}
+
+tr:not(.green){
+    background: chartreuse;
+}

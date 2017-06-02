@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#tr">
+    <label for="nm">Name </label><br/>
+    <input type="text" id="nm" size="20"><br/>
+    <label>Email <br/>
+        <input type="email" size="20"></label><br/>
+    Sex <br/>
+    <label><input type="radio" name="sex" value="Male">Male</label>
+    <label><input type="radio" name="sex" value="Female">Female</label><br/>
+    Current status <br/>
+    <label><input type="checkbox" name="status" value="Student"> Student </label><br/>
+    <label><input type="checkbox" name="status" value="Emploed"> Emploed </label><br/>
+    <label><input type="checkbox" name="status" value="Unemploed"> Unemploed </label><br/>
+    Month and Year of birth <br/>
+    <input type="month"><br/>
+    <select name="month_1">
+        <option value="january">january</option>
+        <option value="febrary" selected>febrary</option>
+        <option value="March">March</option>
+    </select><br/>
+    Skills and Technologies <br/>
+    <select name="skills" id="sk" multiple size="10">
+        <optgroup label="Tech skills">
+        <option value="">Html</option>
+        <option value="">css</option>
+        <option value="">javascript</option>
+        <option value="">git</option>
+        </optgroup>
+
+        <optgroup label="Soft skills">
+        <option value="">time management</option>
+        <option value="">proactivity</option>
+        <option value="">teamwork</option>
+        <option value="">leadership</option>
+        </optgroup>
+    </select>
+    <br/>
+    <label for="ph">Photo </label><br/>
+    <input type="file" id="ph"><br/>
+    <label for="com">Comments</label> <br/>
+    <textarea name="comments" id="com" rows="6" cols="20">
+        Пишите комментарии
+        здесь
+        вот
+    </textarea>
+    <input type="submit" value="Save">
+</form>
+</body>
+</html>

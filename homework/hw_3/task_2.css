@@ -1,0 +1,63 @@
+.tabl tr:nth-child(even){
+    background: yellow;
+}
+td:nth-child(2n+3){
+    background: red;
+}
+
+td{
+    border-bottom: solid grey 1px;
+    padding: 5px;
+}
+.tabl {
+    border-spacing: 0;
+}
+
+label[class="red"]{
+    color:red;
+    text-decoration: underline;
+}
+
+label[class="green"]{
+    color:green;
+    text-decoration: underline;
+}
+
+label[class="blue"]{
+    color:blue;
+    text-decoration: underline;
+}
+
+input[value="red"]:not(:checked)+.red{
+    opacity: 0.5;
+}
+input[value="green"]:not(:checked)+.green{
+    opacity: 0.5;
+}
+input[value="blue"]:not(:checked)+.blue{
+    opacity: 0.5;
+}
+
+div input[value="red"]:checked~span.red {
+    display: none;
+}
+div input[value="green"]:checked~span.green {
+    display: none;
+}
+div input[value="blue"]:checked~span.blue {
+    display: none;
+}
+span.red{
+    background: red;
+    border-radius: 5px;
+}
+
+span.green{
+    background: green;
+    border-radius: 5px;
+}
+
+span.blue{
+    background: blue;
+    border-radius: 5px;
+}
