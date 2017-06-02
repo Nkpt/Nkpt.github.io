@@ -1,0 +1,32 @@
+
+ul.menu{
+    width: 900px;
+    margin: 0px auto;
+    border: 1px solid black;
+    /*align-content: center;*/
+    background: mediumpurple;
+    padding: 0px;
+}
+
+div.conteiner{
+    background: mediumpurple;
+    /*border: 1px solid black;*/
+}
+
+.menu li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    border: 1px solid black;
+
+}
+
+ul.menu li:hover{
+    background: honeydew;
+    color: grey;
+}
+.menu li.float{
+    float: right;
+    width: auto;
+}
