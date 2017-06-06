@@ -245,7 +245,7 @@ p.banner_description{
     margin: 5px;
 }
 
-input[type="button"]{
+.butt input[type="button"]{
     margin-bottom: 15px;
     padding: 5px 45px;
     border-radius: 5px;
@@ -372,4 +372,74 @@ input[type="button"]{
 
 .prici_head{
     text-transform: uppercase;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i');
+
+.info_icon{
+    text-align: center;
+}
+
+h2.info_icon_header{
+    text-transform: uppercase;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*text-align: center;*/
+}
+
+.icon_box{
+    width: 300px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.caption_icon{
+    text-transform: uppercase;
+    color: #3070a8;
+    font-weight: bold;
+}
+
+.info_text{
+    color: #999999;
+}
+
+h2.middle_section_header{
+    text-transform: uppercase;
+    color: #ee8129;
+    font-size: 26pt;
+    font-family: "Myriad Pro", sans-serif;
+}
+
+ul.middle_list{
+    color: #9d9d9d;
+    line-height: 30px;
+    font-size: 12pt;
+    width: 650px;
+    font-family: 'Open Sans', sans-serif;
+    /*padding: 0;*/
+    /*margin: 0;*/
+}
+
+li.middle_list_item.blue_item{
+    color: #3070a8;
+
+}
+
+.middle_description{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19pt;
+    font-style: italic;
+}
+
+.middle_section{
+    background: url("img/middle_back_1.png"), url("img/middle_back_2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /*width: 685px;*/
+    padding: 85px 170px;
 }
