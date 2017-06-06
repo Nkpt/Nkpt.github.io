@@ -24,10 +24,10 @@ div.conteiner{
 
 }
 
-ul.menu li:hover{
+/*ul.menu li:hover{
     background: honeydew;
     color: grey;
-}
+}*/
 .menu li.float{
     float: right;
     width: auto;
@@ -53,6 +53,7 @@ ul.menu li:hover{
      color: mediumpurple;
      font-family: "Economica";
 }
+
 
 
 /* div .podmenu:hover :first-of-type li{

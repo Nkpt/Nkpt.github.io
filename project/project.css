@@ -1,0 +1,375 @@
+.banner{
+    padding: 160px 0 110px 0;
+    background: url("img/ban_back_2.png"),url("img/ban_back_1.png"),url("img/banner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+h1.company_name {
+    display: inline-block;
+    color: #ee8129;
+    font-weight: normal;
+    margin-right: 150px;
+    /*margin-left: 180px;*/
+
+}
+
+span.blue_bold{
+    color: #3070a8;
+    font-weight: bold;
+}
+
+ul.menu{
+    list-style-type: none;
+    display: inline-block;
+    /*border: 1px solid black;*/
+    margin-bottom: 0;
+}
+
+li.menu_item {
+    display: inline-block;
+    /*padding: 10px;*/
+    margin: 0 5px;
+
+    text-align: center;
+    vertical-align: middle;
+    /*border: 1px solid black;*/
+
+}
+
+li.menu_item:hover a{
+    border-bottom: solid 4px #3070a8;
+}
+
+.menu_item a {
+    display: block;
+    padding: 25px 10px 30px 10px;
+    text-decoration: none;
+    color: #989898;
+    /*border: solid 1px black;*/
+    /*width: 70px;*/
+    /*height: 10px;*/
+    border-bottom: 4px solid rgba(0,0,0,0);
+    text-transform: uppercase;
+}
+
+div.banner{
+    text-align: center;
+}
+
+p.banner_slogan{
+    font-size: 48pt;
+    color: white;
+    text-transform: uppercase;
+    /*border: solid 1px black;*/
+    margin-bottom: 0;
+}
+
+span.banner_intro{
+    font-size: 36pt;
+    text-transform: none;
+}
+
+p.banner_description{
+    font-size: 20pt;
+    color: white;
+    font-style: italic;
+    /*text-transform: none;*/
+    /*border: solid 1px black;*/
+
+}
+
+.banner_button{
+    width: 245px;
+    height: 60px;
+    font-size: 16pt;
+    background: rgba(0,0,0,0);
+    color: white;
+    border-radius: 3px;
+    border: 1px white solid;
+    text-transform: uppercase;
+}
+
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+.main_otz{
+    background: url("img/back_2.png"),url("img/Layer_back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.header_otz{
+    text-align: center;
+    /*padding: 15px 0;*/
+    /*border: solid 1px;*/
+}
+
+.photo_clients{
+    display: inline-block;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    /*border: solid 1px;*/
+
+}
+.otz_text {
+    display: inline-block;
+    width: 365px;
+    height: 100px;
+    margin: 0 25px;
+    border: solid 1px;
+    position: relative;
+    padding: 5px;
+    vertical-align: top;
+    /*overflow: hidden;
+    text-overflow: ellipsis;*/
+    background: white;
+}
+
+.otz_box{
+    display: inline-block;
+    /*border: solid 1px;*/
+    /*padding: 0;*/
+    margin-top: 25px;
+}
+
+.otz_box{
+    /*height: 100px;*/
+    /*width: 365px;*/
+}
+
+.header_text{
+    display: inline-block;
+    position: relative;
+    /*border: solid 1px;*/
+    width: 365px;
+}
+.clients_status{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*border: solid 1px;*/
+    padding: 5px;
+    color: mediumpurple;
+}
+.clients_name{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    color: mediumpurple;
+}
+
+.some_text{
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: dotted;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 2.4em;
+
+}
+
+.header_otz{
+    color: #ee8129;
+    font-size: 35px;
+    padding: 25px;
+}
+
+.header_blue{
+    color: blue;
+}
+.list_of_otz{
+    padding-bottom: 35px;
+    /*padding-left: 35px;*/
+    /*padding-right: 35px;*/
+}
+
+
+/*tttttttttttttttttttttttttttttttt*/
+
+.big{
+    /*position: absolute;*/
+    /*margin: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;*/
+    /*border: solid 1px;*/
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background: #ee8129;
+    min-width: 250px;
+
+}
+
+.best{
+    /*width: 100;*/
+    /*margin: 15px auto;*/
+    /*text-align: center;*/
+    padding: 15px 10px;
+}
+
+.ic_gr{
+    padding: 10px 10px;
+}
+
+.uslov li{
+    list-style-type: none;
+    text-align: left;
+    padding-right: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 1px;
+    margin-top: 2px;
+    /*border: solid 1px;*/
+
+}
+.uslov{
+    margin-top: 0;
+    padding: 0;
+    /*border: solid 1px;*/
+}
+
+.uslov ul{
+    /*border: solid 1px;*/
+    text-align: left;
+    padding: 0px 5px;
+    margin: 5px;
+}
+
+input[type="button"]{
+    margin-bottom: 15px;
+    padding: 5px 45px;
+    border-radius: 5px;
+    background: #ee8129;
+    color: white;
+    /*border: solid #ee8129;*/
+    /*border-shadow: 0 0 3px rgba(0,0,1,0.5);*/
+}
+
+.uslov li:before{
+    content: "";
+    background: url("img/galka_new.png") no-repeat;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 20px;
+}
+
+.uslov li:nth-child(odd)
+{
+    background: #edf5fd;
+}
+.uslov li:nth-child(even)
+{
+    background: #f5f5f6;
+}
+
+/*ul, li {*/
+/*padding: 0;*/
+/*display: inline-block;*/
+/*}*/
+
+
+.tw5, .dol, .month{
+    display: inline-block;
+    /*border: 1px solid;*/
+    /*position: absolute;*/
+}
+
+.tw5{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.dol{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*margin-left: -15px;*/
+}
+
+.month{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.price{
+    /*border: solid 1px;*/
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    padding-right: 8ex;
+    padding-left: 2ex;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.info{
+    background: white;
+    margin: 3px;
+}
+
+
+
+.osnov{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    /*border: 1px solid red;*/
+    min-width: 710px;
+}
+
+.first, .third{
+    position: absolute;
+
+}
+
+.second{
+    /*margin-left: 400px;*/
+    z-index: 2;
+    margin-top: 10px;
+}
+
+.first{
+    margin-left: -230px;
+    z-index: -1;
+}
+.third{
+    margin-left: -20px;
+    z-index: -1;
+
+}
+
+.header, .main_otz{
+    padding: 0 170px;
+}
+
+.list_of_otz{
+    text-align: center;
+}
+
+.header_otz{
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.header_blue{
+    font-weight: bold;
+}
+
+.prici_head{
+    text-transform: uppercase;
+}

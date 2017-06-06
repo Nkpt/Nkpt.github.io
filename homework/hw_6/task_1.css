@@ -1,0 +1,108 @@
+.main_otz{
+    background: url("img/back_2.png"),url("img/Layer_back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.header_otz{
+    text-align: center;
+    /*padding: 15px 0;*/
+    /*border: solid 1px;*/
+}
+
+.photo_clients{
+    display: inline-block;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    /*border: solid 1px;*/
+
+}
+.otz_text {
+    display: inline-block;
+    width: 365px;
+    height: 100px;
+    margin: 0 25px;
+    border: solid 1px;
+    position: relative;
+    padding: 5px;
+    vertical-align: top;
+    /*overflow: hidden;
+    text-overflow: ellipsis;*/
+    background: white;
+}
+
+.otz_box{
+    display: inline-block;
+    /*border: solid 1px;*/
+    /*padding: 0;*/
+    margin-top: 25px;
+}
+
+.otz_box{
+    /*height: 100px;*/
+    /*width: 365px;*/
+}
+
+.header_text{
+    display: inline-block;
+    position: relative;
+    /*border: solid 1px;*/
+    width: 365px;
+}
+.clients_status{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*border: solid 1px;*/
+    padding: 5px;
+    color: mediumpurple;
+}
+.clients_name{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    color: mediumpurple;
+}
+
+.some_text{
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: dotted;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 2.4em;
+
+}
+
+.header_otz{
+    color: #ee8129;
+    font-size: 35px;
+    padding: 25px;
+}
+
+.header_blue{
+    color: blue;
+}
+.list_of_otz{
+    padding-bottom: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+/*.list_of_otz, .otz_box, .otz_text, .clients_status, .photo_clients, p{
+    margin: 0;
+    padding: 0;
+}*/
+
+/*.otz_box{
+position: relative;
+}
+
+.otz_text{
+    position: absolute;
+    top: 0;
+}*/
