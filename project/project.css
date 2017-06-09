@@ -1,9 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i');
+
+.header, .banner-main, .info_icon, .middle_section-main, .osnov-main, .list_of_otz, .contacts-company-main{
+    width: 1024px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+    /*padding: 0;*/
+}
+
+.otz_box:nth-child(even) {
+    margin-left: 36px;
+}
+
 .banner{
     padding: 160px 0 110px 0;
     background: url("img/ban_back_2.png"),url("img/ban_back_1.png"),url("img/banner.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    min-width: 1024px;
 
 }
 
@@ -60,7 +74,7 @@ div.banner{
 }
 
 p.banner_slogan{
-    font-size: 48pt;
+    font-size: 46pt;
     color: white;
     text-transform: uppercase;
     /*border: solid 1px black;*/
@@ -98,6 +112,7 @@ p.banner_description{
     background: url("img/back_2.png"),url("img/Layer_back.png");
     background-repeat: no-repeat;
     background-size: cover;
+    min-width: 1024px;
 
 }
 
@@ -117,9 +132,9 @@ p.banner_description{
 }
 .otz_text {
     display: inline-block;
-    width: 365px;
+    width: 360px;
     height: 100px;
-    margin: 0 25px;
+    margin: 0 0 0 15px;
     border: solid 1px;
     position: relative;
     padding: 5px;
@@ -241,7 +256,7 @@ p.banner_description{
 .uslov ul{
     /*border: solid 1px;*/
     text-align: left;
-    padding: 0px 5px;
+    padding: 0 5px;
     margin: 5px;
 }
 
@@ -313,8 +328,8 @@ p.banner_description{
     text-align: left;
     padding-right: 8ex;
     padding-left: 2ex;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 .info{
     background: white;
@@ -353,9 +368,11 @@ p.banner_description{
 
 }
 
+/*
 .header, .main_otz{
     padding: 0 170px;
 }
+*/
 
 .list_of_otz{
     text-align: center;
@@ -373,9 +390,6 @@ p.banner_description{
 .prici_head{
     text-transform: uppercase;
 }
-
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i');
 
 .info_icon{
     text-align: center;
@@ -441,5 +455,199 @@ li.middle_list_item.blue_item{
     background-position: center center;
     background-size: cover;
     /*width: 685px;*/
-    padding: 85px 170px;
+    padding: 85px 0;
+    min-width: 1024px;
+}
+
+.otz_text:before{
+    content: '';
+    border: 15px solid transparent;
+    border-right: solid white 15px;
+    position: absolute;
+    top: 43px;
+    left: 0;
+    margin-left: -30px;
+}
+
+/*
+.otz_text::after {
+    content: '';
+    !*position: absolute; !* Абсолютное позиционирование *!*!
+    !*left: 20px; bottom: -20px; !* Положение треугольника *!*!
+    border: 10px solid transparent; !* Прозрачные границы *!
+    border-top: 10px solid green; !* Добавляем треугольник *!
+}*/
+
+.company-contact-infomation_adress, .company-contact-infomation_contacts{
+    list-style-type: none;
+}
+
+li.contacts_item.email, li.contacts_item.tel, .company-contact-infomation_adress{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+li.contacts_item.email::before{
+    background-image: url("img/contacts_img.png");
+    background-repeat: no-repeat;
+    /*background-position: 0 0;*/
+    width: 23px;
+    height: 16px;
+    content: ' ';
+    position: absolute;
+    top:3px;
+    left: 0;
+    margin-left: -45px;
+
+}
+
+li.contacts_item.tel::before{
+    background-image: url("img/contacts_img.png");
+    background-repeat: no-repeat;
+    background-position: -26px 0;
+    width: 20px;
+    height: 26px;
+    content: ' ';
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-left: -45px;
+
+}
+.company-contact-infomation_adress::before{
+    background-image: url("img/contacts_img.png");
+    background-repeat: no-repeat;
+    background-position: -47px 0;
+    width: 23px;
+    height: 31px;
+    content: ' ';
+    position: absolute;
+    top:10px;
+    left: 0;
+    margin-left: -5px;
+
+}
+
+.social div{
+    position: relative;
+    display: inline-block;
+    width: 47px;
+    height: 47px;
+    /*border-radius: 100%;*/
+    /*border-color: #3070a8;*/
+}
+
+.social div:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-image: url("img/social.png");
+    background-repeat: no-repeat;
+    width: 46px;
+    height: 46px;
+
+}
+
+.twitter:after{
+  /*  position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-image: url("img/social.png");
+    background-repeat: no-repeat;
+    !*background-position: 0 0;*!
+    width: 46px;
+    height: 46px;*/
+
+}
+
+.instagram:after{
+    /*position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-image: url("img/social.png");
+    background-repeat: no-repeat;*/
+    background-position: -53px 0;
+    /*width: 46px;
+    height: 46px;*/
+
+}
+
+.face-book:after{
+    /*position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-image: url("img/social.png");
+    background-repeat: no-repeat;*/
+    background-position: -106px 0;
+   /* width: 46px;
+    height: 46px;*/
+
+}
+
+/*.social, .map-adress{
+    display: inline-block;
+}*/
+
+.contacts-company-main{
+    position: relative;
+    border: 1px solid black;
+    height: 345px;
+}
+
+.map-adress{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.footer{
+    /*clear: right;*/
+    border: 1px solid black;
+}
+
+/*.map-adress{
+    display: inline-block;
+}*/
+
+/*.map-adress{
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+}*/
+
+.map-adress__img {
+    width: 700px;
+    height: 345px;
+
+}
+
+.social{
+    margin-top: 50px;
+}
+
+/*
+.all-content{
+    width: 1024px;
+}*/
+
+.company-contact-infomation{
+    margin-left: 20px;
+}
+.footer{
+    background-color: #3070a8;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+    min-width: 1024px;
+}
+.designed__sait{
+    font-weight: bold;
+    color: black;
+}
+
+.copyright__company-name{
+    font-weight: bold;
 }
