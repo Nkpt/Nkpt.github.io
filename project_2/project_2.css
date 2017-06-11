@@ -1,0 +1,69 @@
+.list-of-photo{
+    text-align: center;
+}
+
+.myPhoto{
+    width: 360px;
+    height: 260px;
+    /*margin: 30px;*/
+
+}
+
+.head-title{
+    text-align: center;
+    font-size: 41pt;
+    color: #2d394f;
+    margin-bottom: 20px;
+}
+
+.head-subtitle{
+    text-align: center;
+    font-size: 15pt;
+    color: #909090;
+    margin-bottom: 30px;
+}
+
+.br{
+    display: none;
+}
+
+div.myPhoto:nth-child(3n-1)+br{
+    display: inline;
+
+}
+
+div.myPhoto{
+    display: inline-block;
+    position: relative;
+    margin: 30px;
+    padding: 0;
+    border: solid 1px red;
+    z-index: 1;
+}
+
+div.myPhoto-hover{
+    background-color: #3aaef4;
+    opacity: 0.5;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.myPhotoButton{
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+}
+
+.zoom{
+    margin-left: -25px;
+}
+
+.myPhoto:hover div.myPhoto-hover{
+    z-index: 2;
+}
