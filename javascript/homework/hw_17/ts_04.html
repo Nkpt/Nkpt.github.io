@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul class = "list"></ul>
+
+<script>
+
+    var quest = quest = prompt('Введите что- нибудь');
+    var ourList = document.createElement('ul');
+    var listItem;
+    //var ul = document.createElement('ul');
+    document.body.appendChild(ourList);
+
+    while (quest&&quest!==''){
+        listItem = document.createElement('li');
+        textItem = document.createTextNode(quest);
+
+        listItem.appendChild(textItem);
+        ourList.append(listItem);
+        quest = prompt('Введите что- нибудь');
+    }
+
+
+
+
+
+</script>
+
+</body>
+</html>
