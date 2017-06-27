@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+
+<input type="button" onclick="clockStart()" value="Start">
+
+<input type="button" onclick="clockStop()" value="Stop">
+
+
+<script>
+    var div = document.createElement('div');
+    //input.setAttribute('type', 'text');
+    //input.setAttribute('value', 'text');
+
+    var spanH = document.createElement('span');
+    //spanH.setAttribute('', 'red');
+    spanH.style.color = 'red';
+    var spanM = document.createElement('span');
+    spanM.style.color = 'green';
+    var spanS = document.createElement('span');
+    spanS.style.color = 'blue';
+    div.appendChild(spanH);
+    div.appendChild(spanM);
+    div.appendChild(spanS);
+
+    document.body.appendChild(div);
+    var stop=true;
+
+
+//    var timeId = setTimeout((function setClock() {
+//        //if(stop){return;}
+//        input.setAttribute('value', 'ddsv');
+//        var timeData = new Date();
+//        var hours = timeData.getHours();
+//        var minutes = timeData.getMinutes();
+//        var seconds = timeData.getSeconds();
+//        var str = hours+':'+ minutes+':'+ seconds;
+//        console.log(str);
+//        setTimeout(setClock, 1000);
+//
+//    })(), 1000);
+    var timeId='';
+    function clockStart() {
+        timeId = setTimeout((function setClock() {
+            //if(stop){return;}
+
+            var timeData = new Date();
+            var hours = timeData.getHours();
+            var minutes = timeData.getMinutes();
+            var seconds = timeData.getSeconds();
+
+            spanH.innerHTML = (hours<10?'0'+hours:hours)+':';
+            spanM.innerHTML =(minutes<10?'0'+minutes:minutes) +':';
+            spanS.innerHTML =(seconds<10?'0'+seconds:seconds);
+
+            var str = (hours<10?'0'+hours:hours)+':'+(minutes<10?'0'+minutes:minutes) +':'+ (seconds<10?'0'+seconds:seconds);
+            //input.setAttribute('value', str);
+            console.log(str);
+
+
+
+            timeId = setTimeout(setClock, 1000);
+
+        })(), 1000);
+        }
+
+
+
+        function clockStop() {
+            //stop=true;
+            clearTimeout(timeId);
+        }
+
+//    var timerId = setTimeout(function tick() {
+//        alert( "тик" );
+//        timerId = setTimeout(tick, 2000);
+//    }, 2000);
+
+</script>
+
+</body>
+
+</html>

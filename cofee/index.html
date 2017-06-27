@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdw_pn2nqaf_k2n2wZDQy5ax3TpCyJaHKy-otIwja-hPmc4Pw/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Загрузка...</iframe>
+
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSdw_pn2nqaf_k2n2wZDQy5ax3TpCyJaHKy-otIwja-hPmc4Pw/formResponse?embedded=true" class="cofeeTraid">
+
+    <input type="text" size="10" name="entry.274108593" class="cofeeTraid__price"><br/>
+    <input type="text" size="10" name="entry.2073509903" class="cofeeTraid__count"><br/>
+    <input type="text" size="10" name="entry.152804051" class="cofeeTraid__sum"><br/>
+
+    <input type="radio" name="entry.455962007" value="Класическое"><br/>
+    <input type="radio" name="entry.455962007" value="Экзотическое"><br/>
+
+    <input type="radio" name="entry.1862407696" value="эспрессо"><br/>
+    <input type="radio" name="entry.1862407696" value="американо"><br/>
+    <input type="radio" name="entry.1862407696" value="мексикано"><br/>
+    <input type="radio" name="entry.1862407696" value="руссиано"><br/>
+
+
+
+
+    <button type="submit" class=".submitButton">
+        Отправить
+    </button>
+</form>
+<script>
+
+
+    $(document).ready(function(){ // после загрузки DOM
+        $('.cofeeTraid').submit(function(e){ // вешаем событие на отправку формы
+            e.preventDefault(); // выключаем стандартное действие отправки
+            var form = $(this); // запомним форму в переменной
+
+            // добавим небольшую секцию проверки на заполненность
+//            var errors = false; // сначала ошибок нет
+//            form.find('.req').each(function(){ // пройдем по каждому полю с классом .req в форме
+//                $(this).removeClass('error'); // сначала уберем у него класс с ошибкой, на случай если он там есть
+//                if ($(this).val() == '') { // если оно пустое
+//                    $(this).addClass('error'); // добавим к нему класс с ошибкой
+//                    errors = true; // найдена ошибка
+//                }
+//            });
+//            if (errors) return false; // если есть ошибка то больше ничего не делаем
+
+            var data = form.serialize(); // сериализуем данные формы в строку для отправки, обратите внимание что атрибуты name у полей полностью сопдают с нэймами у полей самой гугл формы
+
+            $.ajax({ // инициализируем аякс
+                url: "https://docs.google.com/forms/d/e/1FAIpQLSdw_pn2nqaf_k2n2wZDQy5ax3TpCyJaHKy-otIwja-hPmc4Pw/formResponse?embedded=true", // слать надо сюда, строку с буковками надо заменить на вашу, это атрибут action формы
+                data: data, // данные  которые мы сериализовали
+                type: "POST", // постом
+                //dataType: "xml", // ответ ждем в формате xml
+                beforeSend: function(){ // перед отправкой
+                    form.find('.submitButton').attr('disabled'); // отключим кнопку
+                }
+//                statusCode: { // после того как пришел ответ от сервера
+//                    0: function (){ // это успешный случай
+//                        form.html('<h4>Спасибо!</h4><p>Форма отправлена блаблабла</p>'); // сунем в форму сообщение что все ок
+//                    },
+//                    200: function (){ // это тоже успешный случай
+//                        form.html('<h4>Спасибо!</h4><p>Форма отправлена блаблабла</p>'); // сунем в форму сообщение что все ок
+//                    }
+//                }
+            });
+        });
+    });
+
+</script>
+</body>
+</html>
+
+
+ <!--https://docs.google.com/forms/d/e/1FAIpQLSdw_pn2nqaf_k2n2wZDQy5ax3TpCyJaHKy-otIwja-hPmc4Pw/viewform?usp=sf_link-->
+
+<!--у сумм entry.152804051-->
+<!--цена entry.274108593-->
+<!--количество entry.2073509903-->
+<!--меню entry.455962007-->
+<!--напиток entry.1862407696-->

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <style>
+        .hide{
+            display: none;
+        }
+        .header_list{
+        cursor: pointer;
+        display: inline-block;
+
+    }
+        .list{
+            margin: 5px;
+            list-style-type: none;
+            padding-left: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="header_list"><span class="close_icon">▶</span> <span class="open_icon  hide">▼</span> Сладости (нажми меня)!</div>
+<ul class="list hide">
+    <li>Торт</li>
+    <li>Пончик</li>
+    <li>Пирожное</li>
+</ul>
+
+
+<script>
+    function opener() {
+        document.getElementsByClassName('open_icon')[0].classList.toggle('hide');
+        document.getElementsByClassName('close_icon')[0].classList.toggle('hide');
+        document.getElementsByClassName('list')[0].classList.toggle('hide');
+    }
+    document.getElementsByClassName('header_list')[0].addEventListener('click',opener);
+</script>
+
+</body>
+
+</html>

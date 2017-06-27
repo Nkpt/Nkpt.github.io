@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        #field {
+            width: 200px;
+            border: 10px groove black;
+            background-color: #00FF00;
+            position: relative;
+        }
+
+        #ball {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div id="field">
+    <img src="https://js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+</div>
+
+<script type="text/javascript" charset="utf-8">
+   // var img = document.firstChild;
+    var img = document.body.querySelector('img');
+    var imgWidth = img.clientWidth;
+    var imgHeight = img.offsetHeight;
+
+    var parWidth = img.parentNode.clientWidth;
+
+    console.log(parWidth, imgWidth);
+
+    //var newimg = img.cloneNode()
+
+</script>
+</body>
+
+</html>

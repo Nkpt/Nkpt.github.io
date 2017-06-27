@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 3px;
+            text-align: center;
+        }
+
+        th {
+            font-weight: bold;
+            background-color: #E6E6E6;
+        }
+    </style>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+
+<div id="calendar"></div>
+
+<script>
+    function createCalendar(id, year, gmonth) {
+        var elem = document.getElementById(id);
+        var str = '<tr><th>ПН<\/th><th>ВТ<\/th><th>СР<\/th><th>ЧТ<\/th><th>ПТ<\/th><th>СБ<\/th><th>ВС<\/th><\/tr><tr>';
+        var month =gmonth-1;
+        var dt = new Date(year, month, 1);
+        var i=1;
+        var fixMonth = dt.getMonth();
+
+        //прставим пустые клетки
+        var empty = 0;
+        if(dt.getDay() === 0){
+            empty = 6;
+        } else {
+            empty = dt.getDay()-1;
+        }
+
+        for(empty;empty!==0;empty--){
+            str+='<td> <\/td>';
+        }
+
+        while(dt.getMonth()===fixMonth){
+            str+='<td>'+dt.getDate()+'<\/td>';
+            if(dt.getDay()%7===0){
+                //доб конец и начало нов строки
+                str+='<\/tr><tr>'
+            }
+            //dt=new Date(year, month, ++i);
+            dt.setDate(dt.getDate()+1)
+        }
+        str+='<\/tr>';
+        tb = document.createElement('table');
+        tb.innerHTML = str;
+        elem.appendChild(tb);
+    //elem.innerHTML
+
+    }
+
+    createCalendar('calendar', 2017, 5)
+</script>
+</body>
+
+</html>
+

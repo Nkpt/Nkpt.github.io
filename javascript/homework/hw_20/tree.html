@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        .tree span:hover{
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .hide{
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<ul class="tree">
+    <li>Животные
+        <ul>
+            <li>Млекопитающие
+                <ul>
+                    <li>Коровы</li>
+                    <li>Ослы</li>
+                    <li>Собаки</li>
+                    <li>Тигры</li>
+                </ul>
+            </li>
+            <li>Другие
+                <ul>
+                    <li>Змеи</li>
+                    <li>Птицы</li>
+                    <li>Ящерицы</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Рыбы
+        <ul>
+            <li>Аквариумные
+                <ul>
+                    <li>Гуппи</li>
+                    <li>Скалярии</li>
+                </ul>
+
+            </li>
+            <li>Морские
+                <ul>
+                    <li>Морская форель</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+
+    var tree = document.getElementsByClassName('tree')[0];
+    var allLi = tree.querySelectorAll('li');
+
+    for(var j =0; j<allLi.length; j++){
+
+        var span = document.createElement('span');
+        allLi[j].insertBefore(span, allLi[j].firstChild);
+        span.appendChild(span.nextSibling);
+    }
+
+    function showChild(e) {
+        if(e.target.tagName!=='SPAN'){return;}
+
+        var parent = e.target.parentNode;
+        var chilren = parent.querySelectorAll('ul');
+
+        if(chilren){
+            for(var i=0; i<chilren.length; i++){
+                chilren[i].classList.toggle('hide');
+            }
+        }
+
+        //e.target.parentNode.querySelector('ul').style.color='red';
+
+
+    }
+
+    document.getElementsByClassName('tree')[0].addEventListener('click', showChild);
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        th {
+            cursor: pointer;
+        }
+
+        th:hover {
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+<table id="grid">
+    <thead>
+    <tr>
+        <th data-type="number">Возраст</th>
+        <th data-type="string">Имя</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>5</td>
+        <td>Вася</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Петя</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>Женя</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Маша</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Илья</td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+    /* ваш код */
+
+    function sortTable(e) {
+
+    if(e.target.tagName !== 'TH'){return;}
+
+    var allRows = document.getElementsByTagName('tbody')[0].rows;
+
+    var arrRows = [];
+    var tableHead = document.getElementsByTagName('thead')[0].firstChild;
+
+    for(var i=0;i<allRows.length; i++){
+        arrRows.push(allRows[i]);
+    }
+
+
+
+    function sortNumber(a, b) {
+       return (+a.cells[0].firstChild.data)-(+b.cells[0].firstChild.data);
+    }
+        function sortString(a, b) {
+            //return (+b.cells[1].firstChild.data)-(+a.cells[1].firstChild.data);
+            if(a.cells[1].firstChild.data < b.cells[1].firstChild.data ){return -1;}
+            if(a.cells[1].firstChild.data >b.cells[1].firstChild.data){return 1;}
+            return 0;
+
+        }
+
+    if(e.target.dataset.type ==='number'){
+        arrRows.sort(sortNumber);
+    } else if(e.target.dataset.type === 'string'){
+        arrRows.sort(sortString);
+    }
+        console.log(arrRows);
+    var newBody = document.getElementsByTagName('tbody')[0];
+    for (var j=0; j<arrRows.length;j++){
+        newBody.appendChild(arrRows[j]);
+    }
+        grid.appendChild(newBody);
+    }
+
+    grid.addEventListener('click',sortTable);
+
+
+</script>
+
+</body>
+
+</html>
