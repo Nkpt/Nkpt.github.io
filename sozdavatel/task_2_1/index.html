@@ -13,38 +13,23 @@
 <body>
 
 <button type="button" class="showChange">Список/Плитка</button>
-</br>
+<br/>
 
 <div class="goods"></div>
 
 <script type="text/javascript">
-    plitka.renderGoods();
+    plitka.init();
 </script>
 
 <!--[if lt IE 9]>
 <script>
-    console.log('sss');
-    window.onresize=plitka.specialRender;
+    //window.onresize=plitka.specialRender;
+    window.attachEvent('onresize', plitka.specialRender);
     plitka.specialRender();
 </script>
 <![endif]-->
 
 <script>
-    var but = document.querySelector('.showChange');
-    var changeShowGoods = function () {
-        var allItem = document.querySelectorAll('.goods__item');
-        for(var i=0;i<allItem.length; i++){
-            allItem[i].classList.toggle('spisok');
-            console.log('ss123');
-        }
-    };
-    if(but.addEventListener){
-    but.addEventListener('click', changeShowGoods);
-    } else {
-
-        but.attachEvent('onclick', changeShowGoods);
-    }
-
 </script>
 
 </body>

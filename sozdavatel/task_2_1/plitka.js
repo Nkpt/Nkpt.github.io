@@ -4,7 +4,7 @@
 
 (function (window) {
 
-    var goodsFromAnywhere = ['Товар_1','Товар_2','Товар_3','Товар_4','Товар_5','Товар_6','Товар_7','Товар_8','Товар_9','Товар_10','Товар_11'];
+
 
     function Plitka() {
         this.goods = [];
@@ -115,18 +115,37 @@
 
     };
 
-    function changeListStyle() {
-        var windowSizeType;
+    Plitka.prototype.changeShowGoods = function () {
+        var but = document.querySelector('.showChange');
+        var allItem = document.querySelectorAll('.goods__item');
+        for(var i=0;i<allItem.length; i++){
+            allItem[i].classList.toggle('spisok');
+        }
+    };
+
+    Plitka.prototype.init = function () {
+
+        var butSh = document.querySelector('.showChange');
+        var goodsFromAnywhere = ['Товар_1','Товар_2','Товар_3','Товар_4','Товар_5','Товар_6','Товар_7','Товар_8','Товар_9','Товар_10','Товар_11'];
+
+        if(butSh.addEventListener){
+            butSh.addEventListener('click', plitka.changeShowGoods);
+        } else {
+            butSh.attachEvent('onclick', plitka.changeShowGoods);
+        }
+
+        this.addGoods(goodsFromAnywhere);
+        this.renderGoods();
+    };
+
+    //var plitka = new Plitka();
+    //plitka.addGoods(goodsFromAnywhere);
 
 
-    }
-
-    var plitka = new Plitka();
-    plitka.addGoods(goodsFromAnywhere);
 
     //window.addEventListener('resize',changeListStyle);
 
-    window.plitka = plitka;
+    window.plitka = new Plitka();
 
 })(window);
 
