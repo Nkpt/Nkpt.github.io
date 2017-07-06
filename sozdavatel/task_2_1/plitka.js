@@ -37,7 +37,6 @@
 
         // document.body.appendChild(fragment);
         if(document.getElementsByClassName){
-            //console.log('sssd');
         document.getElementsByClassName('goods')[0].appendChild(fragment);
         } else{
             document.querySelector('.goods').appendChild(fragment);
@@ -54,7 +53,7 @@
         //console.log(goodsItem);
         //var lineBreak = document.querySelectorAll('.lineBreak');
         var windowSize = document.documentElement.clientWidth;
-        console.log(windowSize);
+        //console.log(windowSize);
         for(var i=0; i<goodsItem.length;i++){
 
             if(windowSize>1024) {

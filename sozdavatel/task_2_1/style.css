@@ -62,4 +62,6 @@
     }
 }
 
-
+.goods__item.spisok{
+    width:100%!important;
+}
