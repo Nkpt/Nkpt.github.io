@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="plitka.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.jsdelivr.net/classlist/2014.01.31/classList.min.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="goods">
+
+</div>
+
+
+<script type="text/javascript">
+    //var list = document.getElementsByClassName('goods')[0];
+    //window.onresize=plitka.specialRender;
+    plitka.renderGoods();
+    //plitka.specialRender();
+
+</script>
+
+<!--[if lt IE 9]>
+<script>
+    console.log('sss');
+    window.onresize=plitka.specialRender;
+    plitka.specialRender();
+</script>
+<![endif]-->
+
+<script>
+    /*var allGoods = document.querySelectorAll('.goods ')[0];
+    var goodsItem = allGoods.querySelectorAll('.goods__item');
+    console.log(goodsItem);
+    //var lineBreak = document.querySelectorAll('.lineBreak');
+    var windowSize = window.innerWidth;
+    console.log(windowSize);
+    for(var i=0; i<goodsItem.length;i++){
+
+        if(windowSize>1024) {
+            //если больше 1024
+            if (i % 3 === 0) {
+                goodsItem[i].style.cssFloat = 'left';
+            }
+
+            if (i % 3 === 2) {
+                goodsItem[i].style.cssFloat = 'right';
+            }
+        } else if(windowSize>=768) {
+
+            //если больше 768 и меньше 1024
+            if (i % 2 === 1) {
+                goodsItem[i].style.cssFloat = 'right';
+            }
+            goodsItem[i].style.width = '45%';
+            // добавить texAlign left для allGoods
+        } else {
+            //если меньше 768
+            goodsItem[i].style.width = '100%';
+        }
+
+
+
+        allGoods.appendChild(goodsItem[i]);
+
+    }
+
+    //document.body.removeChild(allGoods);
+    document.body.appendChild(allGoods);*/
+</script>
+
+
+
+</body>
+</html>
+

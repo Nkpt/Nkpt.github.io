@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+</head>
+<body>
+
+<div class="walkMan">
+    <div class="someMan">gdgd</div>
+</div>
+
+<script>
+
+    var man = document.getElementsByClassName('someMan')[0];
+
+    //man.style.backgroundImage
+
+    console.log(document.body.clientWidth);
+
+    var posMan = 0,
+    imgPos = 0;
+    function walk() {
+
+
+        if (posMan<document.body.clientWidth/2){
+            if(imgPos===-99){imgPos = 0;}
+            //man.style.backgroundPositionX = imgPos + 'px';
+
+//        } else if(posMan<document.body.clientWidth/2){
+//            if(imgPos===-198){imgPos = -99;}
+//            //man.style.backgroundPositionX = imgPos + 'px';
+        }
+        else {
+            clearInterval(timeId);
+            return;
+        }
+
+        man.style.backgroundPositionX = imgPos + 'px';
+        man.style.right = posMan + 'px';
+        posMan+=5;
+        imgPos = imgPos-33;
+
+    }
+
+    var timeId = setInterval(walk,100);
+
+</script>
+
+</body>
+</html>

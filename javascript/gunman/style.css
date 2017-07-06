@@ -1,0 +1,23 @@
+body {
+    background-image: url("bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.someMan{
+    width: 33px;
+    height: 65px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url("gunman.png");
+    background-repeat: no-repeat;
+}
+
+.walkMan{
+    width: 100%;
+    height: 65px;
+    position: relative;
+
+}
