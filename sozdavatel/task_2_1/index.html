@@ -5,6 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="plitka.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--[if lt IE 9]>
     <script src="http://cdn.jsdelivr.net/classlist/2014.01.31/classList.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -30,8 +31,35 @@
 <![endif]-->
 
 <script>
+
+    /*var data = 'abcdefg'; // сериализуем данные формы в строку для отправки, обратите внимание что атрибуты name у полей полностью сопдают с нэймами у полей самой гугл формы
+
+    $.ajax({ // инициализируем аякс
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSdw_pn2nqaf_k2n2wZDQy5ax3TpCyJaHKy-otIwja-hPmc4Pw/formResponse?embedded=true", // слать надо сюда, строку с буковками надо заменить на вашу, это атрибут action формы
+        data: data, // данные  которые мы сериализовали
+        type: "POST", // постом
+        dataType: 'json'
+//
+        //dataType: "html" // ответ ждем в формате xml
+        //dataType: "html", // ответ ждем в формате
+        /!*beforeSend: function(){ // перед отправкой
+            form.find('.submitButton').attr('disabled'); // отключим кнопку
+        },
+        statusCode: { // после того как пришел ответ от сервера
+            0: function (){ // это успешный случай
+                //form.html('<h4>Спасибо!</h4><p>Форма отправлена блаблабла111</p>'); // сунем в форму сообщение что все ок
+            },
+            200: function (){ // это тоже успешный случай
+                // form.html('<h4>Спасибо!</h4><p>Форма отправлена блаблаблаqqq</p>'); // сунем в форму сообщение что все ок
+            }
+        }*!/
+    })
+        .success(console.log(this))
+    ;*/
+
 </script>
 
 </body>
 </html>
+
 

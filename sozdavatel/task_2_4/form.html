@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="undo.js"></script>
+</head>
+<body>
+
+<form action="">
+    
+    <table>
+        <tr>
+            <td>
+
+                Текст 1<input type="text" name="text_1"><br/>
+                Текст 2<input type="text" name="text_2"><br/>
+                <p> Множественный выбор<br/> <select size="5" name="hero" multiple>
+                    <option disabled>Выберите героя</option>
+                    <option value="t1" selected=>Чебурашка</option>
+                    <option value="t2">Крокодил Гена</option>
+                    <option value="t3" selected>Шапокляк</option>
+                    <option value="t4">Крыса </option>
+                </select>
+
+                <p> Стандартный выбор  <select size="1" name="hero_1" >
+                    <option disabled>Выберите героя</option>
+                    <option value="t1" selected=>Чебурашка</option>
+                    <option value="t2">Крокодил Гена</option>
+                    <option value="t3">Шапокляк</option>
+                    <option value="t4">Крыса </option>
+                </select>
+
+                <p><input type="radio" name="drink" value="rad1"> Пиво<Br>
+                    <input type="radio" name="drink" value="rad2" > Чай<Br>
+                    <input type="radio" name="drink" value="rad3" checked> Кофе</p>
+                </p>
+
+                <p><input type="checkbox" name="option1" value="a1" checked>Windows 95/98<Br>
+                    <input type="checkbox" name="option2" value="a2">Windows 2000<Br>
+                    <input type="checkbox" name="option3" value="a3">System X<Br>
+                    <input type="checkbox" name="option4" value="a4">Linux<Br>
+                    <input type="checkbox" name="option5" value="a5">X3-DOS</p>
+
+            </td>
+            <td>
+
+                <p><textarea rows="10" cols="45" name="textArea" ></textarea></p>
+
+                <!--<p> файл <input type="file" name="file_1"></p>-->
+
+                <p> Пароль <input type="password" name="pass_1"></p>
+                <p> email <input type="email" name="email_1"></p>
+                <p> tel <input type="tel" name="tel_1"></p>
+                <p> time <input type="time" name="time_1"></p>
+                <p> url <input type="url" name="url_1"></p>
+
+            </td>
+            <td>
+
+                <p> month <input type="month" name="month_1"></p>
+                <p> week <input type="week" name="week_1"></p>
+                <p> search <input type="search" name="search_1"></p>
+                <p> range <input type="range" name="range_1"></p>
+                <p> number <input type="number" name="number_1"></p>
+                <p> color <input type="color" name="color_1"></p>
+                <p> date <input type="date" name="date_1"></p>
+                <p> datetime <input type="datetime" name="datetime_1"></p>
+                <p> datetime-local <input type="datetime-local" name="datetime-local_1"></p>
+
+            </td>
+        </tr>
+    </table>
+    <button type="button" name="undo" style="width: 30%; height: 25px">шаг назад</button>
+
+
+</form>
+
+<script>
+
+    undoThisForm.init();
+
+    /*var objUndo = {};
+    var changes = [];
+
+    var myForm = document.querySelector('form');
+    var but = document.querySelector('button');
+
+    //Заполняем историю
+    function writeChange(e) {
+        var elem = e.target;
+        //console.dir(changes);
+        changes.push(elem.name);
+
+        function pushSelectedOPt(options) {
+            var selectedOptions = [];
+            for(var i=0; i<options.length;i++){
+                if(options[i].selected){
+                    selectedOptions.push(options[i].value);
+                }
+            }
+            return selectedOptions;
+        }
+
+        if(elem.tagName === 'INPUT' || elem.tagName === 'TEXTAREA'){
+
+            //console.log(elem.value);
+
+            if(elem.type === 'checkbox'){
+                if (elem.name in objUndo) {
+                    objUndo[elem.name].push(elem.checked);
+                } else {
+                    objUndo[elem.name] = [elem.checked];
+                }
+            } else if(elem.type === 'radio'){
+                if (elem.name in objUndo) {
+                    objUndo[elem.name].push(elem.value);
+                } else {
+                    objUndo[elem.name] = [elem.value];
+                }
+            } else {
+                if (elem.name in objUndo) {
+                    objUndo[elem.name].push(elem.value);
+                } else {
+                    objUndo[elem.name] = [elem.value];
+                }
+            }
+
+
+        } else if (elem.tagName === 'SELECT'){
+            if (elem.name in objUndo) {
+                objUndo[elem.name].push(pushSelectedOPt(elem.options));
+            } else {
+                objUndo[elem.name] = [pushSelectedOPt(elem.options)];
+            }
+        }
+
+
+    }
+
+    //Восстанавливаем предыдущее значение
+    function undoChange() {
+        if(changes.length!==0){
+            var myChange = changes.pop();
+            var ourTarget = document.querySelector('[name = '+myChange+']');
+
+            objUndo[myChange].pop();
+
+            if(ourTarget.tagName === 'INPUT'|| ourTarget.tagName === 'TEXTAREA'){
+
+                if(ourTarget.type === 'checkbox'){
+                    if(objUndo[myChange].length!==0){
+                        ourTarget.checked = objUndo[myChange][objUndo[myChange].length-1];
+                    } else {
+                        ourTarget.checked = (typeof ourTarget.getAttribute('checked') === 'string');
+                    }
+                } else if(ourTarget.type === 'radio'){
+                    if(objUndo[myChange].length!==0){
+
+                        var prevCheck = document.querySelector('[name=' + myChange + '][value='+ objUndo[myChange][objUndo[myChange].length-1] +']');
+                        prevCheck.checked = true;
+
+                        //ourTarget.checked = objUndo[myChange][objUndo[myChange].length-1];
+                    } else {
+                        //ourTarget.checked = (typeof ourTarget.getAttribute('checked') === 'string');
+                        var defaultRad = document.querySelector('[name=' + myChange + '][checked]');
+                        if(defaultRad){
+                            defaultRad.checked = true;
+                        } else {
+                            ourTarget.checked = false;
+                        }
+                        //console.log(document.querySelector('[name=' + myChange + '][checked]'));
+                    }
+                } else {
+
+                if(objUndo[myChange].length!==0){
+                    ourTarget.value = objUndo[myChange][objUndo[myChange].length-1];
+                } else {
+                    ourTarget.value = ourTarget.getAttribute('value');
+                }
+                }
+            } else if(ourTarget.tagName === 'SELECT'){
+                if(objUndo[myChange].length!==0){
+                    var arrOfSelected = objUndo[myChange][objUndo[myChange].length-1];
+                    for(var j =0; j<ourTarget.options.length; j++){
+                        ourTarget.options[j].selected = (arrOfSelected.indexOf(ourTarget.options[j].value)!==-1);
+                    }
+                } else {
+                    var opti = ourTarget.options;
+                    for(var i=0; i<opti.length; i++){
+                        opti[i].selected =(typeof opti[i].getAttribute('selected') === 'string');
+                    }
+                }
+            }
+
+
+        } else {
+            alert('Все! Больше некуда возращаться((');
+        }
+    }
+
+    myForm.addEventListener('change', writeChange);
+    but.addEventListener('click', undoChange);*/
+</script>
+
+</body>
+</html>
