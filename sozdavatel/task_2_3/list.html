@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /*li.plus:before {
+            content: '[+]';
+        }
+        li.minus:before {
+            content: '[-]';
+        }
+        .hide{
+            display: none;
+        }*/
+    </style>
+
+    <script src="setPlus.js"></script>
+
+</head>
+<body>
+
+<ul class="tree">
+    <li><a href="http://yandex.ru">Животные</a>
+        <ul>
+            <li><a href="http://yandex.ru">Млекопитающие</a>
+                <ul>
+                    <li><a href="http://yandex.ru">Коровы</a></li>
+                    <li><a href="http://yandex.ru">Ослы</a></li>
+                    <li><a href="http://yandex.ru">Собаки</a></li>
+                    <li><a href="http://yandex.ru">Тигры</a></li>
+                </ul>
+            </li>
+            <li><a href="http://yandex.ru">Другие</a>
+                <ul>
+                    <li><a href="http://yandex.ru">Змеи</a></li>
+                    <li><a href="http://yandex.ru">Птицы</a></li>
+                    <li><a href="http://yandex.ru">Ящерицы</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="http://yandex.ru">Рыбы</a>
+        <ul>
+            <li><a href="http://yandex.ru">Аквариумные</a>
+                <ul>
+                    <li><a href="http://yandex.ru">Гуппи</a></li>
+                    <li><a href="http://yandex.ru">Скалярии</a></li>
+                </ul>
+
+            </li>
+            <li><a href="http://yandex.ru">Морские</a>
+                <ul>
+                    <li><a href="http://yandex.ru">Морская форель</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    setPlusIcon.init();
+
+    /*function setPlusIcon() {
+
+        function toggleHide(elem) {
+            elem.classList.toggle('hide');
+            if(elem.parentNode.tagName === 'LI'){
+                elem.parentNode.style.listStyleType = 'none';
+                elem.parentNode.classList.toggle('plus');
+                //elem.parentNode.classList.toggle('minus');
+            }
+
+        }
+
+        var allList = document.querySelectorAll('ul,ol');
+        for(var i= 0; i<allList.length;i++){
+            toggleHide(allList[i]);
+        }
+
+        var mainLists = document.querySelectorAll('body>ul,body>ol');
+        for(var i= 0; i<mainLists.length;i++){
+            toggleHide(mainLists[i]);
+        }
+
+        var liList = document.querySelectorAll('li');
+
+        for(var i=0; i<liList.length; i++){
+
+            if(liList[i].querySelectorAll('ul,ol').length){
+                //liList[i].style.listStyleType = 'none';
+                liList[i].classList.add('plus');
+            }
+        }
+
+        var listAnch = document.querySelectorAll('a');
+        
+        function aClick(e) {
+            var target = e.target;
+            if(target.tagName === 'A'){
+                if(target.parentNode.querySelectorAll('ul,ol').length){
+                    e.preventDefault();
+                    toggleHide(target.parentNode.querySelector('ul,ol'));
+                    target.parentNode.classList.toggle('minus');
+                }
+            }
+        }
+        
+        document.body.addEventListener('click', aClick);
+
+
+    }*/
+
+</script>
+
+</body>
+</html>

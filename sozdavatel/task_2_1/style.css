@@ -2,6 +2,7 @@
 .goods {
     width: 100%;
     text-align: center;
+    overflow: hidden;
 }
 
 .goods__item {
@@ -64,4 +65,14 @@
 
 .goods__item.spisok{
     width:100%!important;
+}
+
+
+.butMore{
+    text-align: center;
+    width: 30%;
+}
+
+.butMoreDiv{
+    text-align: center;
 }

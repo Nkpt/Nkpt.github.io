@@ -123,6 +123,26 @@
         }
     };
 
+    Plitka.prototype.onLoadRender = function (newGoods) {
+        var length = newGoods.length;
+        var classListGoods = document.querySelector('.goods__item').classList;
+        var isSpisok = Array.prototype.indexOf.call(classListGoods,'spisok');
+
+        var fragment = document.createDocumentFragment(),
+            tempNode;
+
+        for(var i=0; i<length; i++){
+            tempNode = document.createElement('div');
+            tempNode.classList.add('goods__item');
+            if(isSpisok!==-1){tempNode.classList.add('spisok');}
+            tempNode.innerHTML = newGoods[i];
+            fragment.appendChild(tempNode);
+        }
+
+            document.querySelector('.goods').appendChild(fragment);
+
+    };
+
     Plitka.prototype.init = function () {
 
         var butSh = document.querySelector('.showChange');

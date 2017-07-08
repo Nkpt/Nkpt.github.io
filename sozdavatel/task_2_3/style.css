@@ -1,0 +1,9 @@
+li.plus:before {
+    content: '[+]';
+}
+li.minus:before {
+    content: '[-]';
+}
+.hide{
+    display: none;
+}
