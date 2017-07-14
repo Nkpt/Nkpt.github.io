@@ -39,6 +39,7 @@
 <script>
 
     function showMoreGoods() {
+        //console.log('sss');
         var goodsOnPage = plitka.goods.length;
 
         var data = {'goodsOnPage': goodsOnPage};
@@ -48,15 +49,14 @@
             , type:'POST'
             ,dataType: 'json'
             , data:JSON.stringify(data)
-            , success:goodsLoadFromServer
+            , success:function (goodsJson) {
+                plitka.addGoods(goodsJson);
+                plitka.onLoadRender(goodsJson);
+            }
 
         });
 
-        function goodsLoadFromServer(goodsJson) {
-            var newGoods = JSON.parse(goodsJson);
-            plitka.addGoods(newGoods);
-            plitka.onLoadRender(newGoods);
-        }
+
     }
 
 
@@ -64,6 +64,8 @@
     var butMore = document.querySelector('.butMore');
     if(butMore.addEventListener){
         butMore.addEventListener('click', showMoreGoods);
+    } else{
+        butMore.parentNode.removeChild(butMore);
     }
 
 
